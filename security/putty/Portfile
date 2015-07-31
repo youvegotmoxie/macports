@@ -3,7 +3,7 @@
 PortSystem 1.0
 name putty
 version 0.1.0
-categories net
+categories net security CUSTOM
 platforms darwin
 maintainers mike \
 	youvegotmoxie@gmail.com
