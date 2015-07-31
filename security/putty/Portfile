@@ -1,0 +1,19 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+# $Id$
+PortSystem 1.0
+name putty
+version 0.1.0
+categories net
+platforms darwin
+maintainers mike \
+	youvegotmoxie@gmail.com
+description PuTTY terminal emulator
+long_description PuTTY is a client program for the SSH, Telnet and Rlogin network protocols. \
+These protocols are all used to run a remote session on a computer, \
+over a network. PuTTY implements the client end of that session: \
+the end at which the session is displayed, rather than the end \
+at which it runs.
+homepage http://www.chiark.greenend.org.uk/~sgtatham/putty/
+master_sites ftp://ftp.chiark.greenend.org.uk/users/sgtatham/putty-latest/
+checksums sha256 2a46c97a184144e3ec2392aca9acc64d062317a3a38b9a5f623a147eda5f3821
+depends_lib port:krb5
