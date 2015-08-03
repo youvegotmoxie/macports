@@ -7,7 +7,7 @@ version             1.14
 revision            2
 categories          net
 platforms           darwin
-maintainers         mike
+maintainers         nomaintainer
 license             GPL-2
 description         console-based network traffic monitor
 long_description    \
@@ -68,11 +68,17 @@ post-destroot {
     eval file copy [glob ${worksrcpath}/examples/*] \
         ${destroot}${prefix}/share/examples/${name}
 
-		file rename "${destroot}${prefix}/etc/vnstat.conf" "${destroot}${prefix}/etc/vnstat.conf-local"
+	 file rename "${destroot}${prefix}/etc/vnstat.conf" "${destroot}${prefix}/etc/vnstat.conf-local"
 }
 
 post-activate {
     if {![file exists "${prefix}/etc/vnstat.conf"]} {
-        copy "${prefix}/etc/vnstat.conf-local" "${prefix}/etc/vnstat.conf"
+        copy "${prefix}/etc/vnstat.conf" "${prefix}/etc/vnstat.conf-local"
     }
 }
+
+notes "
+
+If not existing, a default vnstat.conf has been created in ${prefix}/etc/vnstat.conf-local
+Copy to ${prefix}/etc/vnstat.conf to get started.
+"
