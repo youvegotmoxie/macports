@@ -1,2 +1,2 @@
 #macports
-Custom port file for shells/zsh.
+Custom port files for shells/zsh and net/vnstat.
