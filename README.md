@@ -1,2 +1,2 @@
 #macports
-custom repo
+Custom port file for shells/zsh.
