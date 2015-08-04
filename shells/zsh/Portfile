@@ -8,7 +8,7 @@ version                 5.0.8
 categories              shells
 platforms               darwin
 license                 Permissive
-maintainers             mike
+maintainers             gmail.com:youvegotmoxie
 
 description             Zsh is a UNIX command interpreter (shell)
 long_description        Zsh is a UNIX command interpreter (shell) which \
