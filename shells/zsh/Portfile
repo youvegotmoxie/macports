@@ -1,14 +1,14 @@
 # -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:filetype=tcl:et:sw=4:ts=4:sts=4
-# $Id: Portfile 126367 2014-10-09 02:07:28Z larryv@macports.org $
+# $Id: Portfile 140000 2015-09-05 22:16:59Z larryv@macports.org $
 
 PortSystem              1.0
 
 name                    zsh
-version                 5.0.8
+version                 5.1
 categories              shells
 platforms               darwin
 license                 Permissive
-maintainers             gmail.com:youvegotmoxie
+maintainers             larryv
 
 description             Zsh is a UNIX command interpreter (shell)
 long_description        Zsh is a UNIX command interpreter (shell) which \
@@ -41,14 +41,16 @@ master_sites            sourceforge:project/zsh/zsh/${version}:src \
                         ftp://ftp.icm.edu.pl/vol/rzm1/zsh/:src \
                         ftp://ftp.icm.edu.pl/vol/rzm1/zsh/:doc
 
-use_bzip2               yes
+use_xz                  yes
 distfiles               ${distname}${extract.suffix}:src \
                         ${distname}-doc${extract.suffix}:doc
 
 checksums               ${distname}${extract.suffix} \
-                            sha256  8079cf08cb8beff22f84b56bd72bb6e6962ff4718d816f3d83a633b4c9e17d23 \
+                            rmd160  3d66abaad114be7d90969f8f1bd4a90b3b3d0f22 \
+                            sha256  c3a654fa0ef26cb1a3228c9257101870e72899fde1cd815388b1b2cbbdfa59b4 \
                         ${distname}-doc${extract.suffix} \
-                            sha256  0ee5088c47fa5ceac6e087c7e00f2ede3f5920a03d32220772342ce980339e40
+                            rmd160  19296befc26f26976d645e359a5152a4c6db8854 \
+                            sha256  b0f921f5323f06b2b96374b7dd2dabc84966260f0c663a9ef88071b0b0d89d66
 
 set doc ${prefix}/share/doc/${name}
 
